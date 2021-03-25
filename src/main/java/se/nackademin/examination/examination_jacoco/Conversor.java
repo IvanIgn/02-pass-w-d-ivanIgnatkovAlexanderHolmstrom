@@ -21,14 +21,14 @@ public class Conversor {
 	}
 	
 	public void setAgeConverterArrayValues(){
-		this.ageConverterArray.add("You are young and talented! Things will come your way soon enough! ");
+		this.ageConverterArray.add("You are young and talented! Things will come your way soon enough!");
 		this.ageConverterArray.add("You are experienced and talented! Things will come your way soon enough!");		
 	}	
 	
 	public void setNameConverterArrayValues(){
 		this.nameConverterArray.add("Your first name is smaller than your last name");		
 		this.nameConverterArray.add("Your last name is smaller than your first name");
-		this.nameConverterArray.add("The lengths of your first name is your last name are the same");
+		this.nameConverterArray.add("The lengths of your first name and your last name are the same");
 	}
 	
 	public void setCityConverterArrayValues(){
@@ -41,7 +41,7 @@ public class Conversor {
 		this.cityConverterArray.add(" G, ");
 		this.cityConverterArray.add(" H, ");
 		this.cityConverterArray.add(" I, ");
-		this.cityConverterArray.add(" J,");
+		this.cityConverterArray.add(" J, ");
 		this.cityConverterArray.add(" a letter that comes after J, ");
 		
 	}

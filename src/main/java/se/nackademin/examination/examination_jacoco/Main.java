@@ -10,6 +10,6 @@ public class Main {
 		ArrayList<String> values = new ArrayList<String>();					
 		values = game.collectInputData();		
 		game.run(values);
-		*/
+	*/	
 	}
 }
