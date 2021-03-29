@@ -9,7 +9,6 @@ import org.junit.Test;
 
 public class DataAnalysisTest {
 	
-	boolean isTrue = false;
 
 	//// Test for buildFinalString ////
 	@Test
@@ -68,20 +67,21 @@ public class DataAnalysisTest {
 	public void testForGetResultStringNamesAndAge5() {			//firstName > lastName && age > 30
 		DataAnalysis dataAnalysis = new DataAnalysis();
 		ArrayList<String> values = new ArrayList<String>();
-		values.addAll(Arrays.asList("Game", "Rafael", "Silva", "M", "35", "Fortaleza"));
+		values.addAll(Arrays.asList("Game", "Rafael", "Silva", "M", "31", "Fortaleza"));
 		String result = dataAnalysis.getResultStringNamesAndAge(values);
-		assertTrue("The result should contain 'The first name is greater or equals in size to the last name and the participant older than 30'",
-				result.contains("The first name is greater or equals in size to the last name and the participant older than 30"));
+		assertTrue("The result should contain 'The first name is greater in size to the last name and the participant older than 30'",
+				result.contains("The first name is greater in size to the last name and the participant older than 30"));
 	} 
-	@Test
+	/*@Test
 	public void testForGetResultStringNamesAndAge6() {			//firstName == lastName && age > 30
 		DataAnalysis dataAnalysis = new DataAnalysis();
 		ArrayList<String> values = new ArrayList<String>();
-		values.addAll(Arrays.asList("Game", "Rafae", "Silva", "M", "35", "Fortaleza"));
+		values.addAll(Arrays.asList("Game", "Rafae", "Silva", "M", "29", "Fortaleza"));
 		String result = dataAnalysis.getResultStringNamesAndAge(values);
 		assertTrue("The result should contain 'The first name is greater or equals in size to the last name and the participant older than 30'",
 				result.contains("The first name is greater or equals in size to the last name and the participant older than 30"));
 	}
+	*/
 	@Test
 	public void testForGetResultStringNamesAndAge7() {			//firstName > lastName && age < 30
 		DataAnalysis dataAnalysis = new DataAnalysis();
@@ -91,15 +91,7 @@ public class DataAnalysisTest {
 		assertTrue("The result should contain 'No analysis was performed'",
 				result.contains("No analysis was performed"));
 	}
-	@Test
-	public void testForGetResultStringNamesAndAge8() {			//firstName == lastName && age < 30
-		DataAnalysis dataAnalysis = new DataAnalysis();
-		ArrayList<String> values = new ArrayList<String>();
-		values.addAll(Arrays.asList("Game", "Rafae", "Silva", "M", "29", "Fortaleza"));
-		String result = dataAnalysis.getResultStringNamesAndAge(values); 
-		assertTrue("The result should contain 'No analysis was performed'",
-				result.contains("No analysis was performed"));
-	} 
+
 	@Test
 	public void testForGetResultStringNamesAndAge9() {			//firstName > lastName && age == 30
 		DataAnalysis dataAnalysis = new DataAnalysis();
@@ -109,7 +101,15 @@ public class DataAnalysisTest {
 		assertTrue("The result should contain 'No analysis was performed'",
 				result.contains("No analysis was performed"));
 	} 
-	
+	@Test
+	public void testForGetResultStringNamesAndAge8() {			//firstName == lastName && age < 30
+		DataAnalysis dataAnalysis = new DataAnalysis();
+		ArrayList<String> values = new ArrayList<String>();
+		values.addAll(Arrays.asList("Game", "Rafae", "Silva", "M", "31", "Fortaleza"));
+		String result = dataAnalysis.getResultStringNamesAndAge(values); 
+		assertTrue("The result should contain 'No analysis was performed'",
+				result.contains("No analysis was performed"));
+	}
 	
 	
 	//// Test for getResulStringHomecityAndAge ////

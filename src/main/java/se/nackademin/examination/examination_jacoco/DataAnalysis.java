@@ -19,8 +19,8 @@ public class DataAnalysis {
 		Game game = new Game();
 		if (values.get(1).length()<=values.get(2).length() && game.getAgeFromInputValues(values)<=30){
 			return "The first name is smaller or equals in size to the last name and the participant is 30 or younger";
-		}  if (values.get(1).length()>=values.get(2).length() && game.getAgeFromInputValues(values)>30){
-			return "The first name is greater or equals in size to the last name and the participant older than 30";
+		}  if (values.get(1).length()>values.get(2).length() && game.getAgeFromInputValues(values)>30){
+			return "The first name is greater in size to the last name and the participant older than 30";
 		}
 		
 		return "No analysis was performed";
