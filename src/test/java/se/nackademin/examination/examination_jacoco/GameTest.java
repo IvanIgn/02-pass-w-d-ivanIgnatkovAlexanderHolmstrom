@@ -1,14 +1,19 @@
 package se.nackademin.examination.examination_jacoco;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static java.util.Arrays.asList;
 
-
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 import org.junit.Test;
 
 public class GameTest {
 	
+public ArrayList<String> values = new ArrayList<String>();
+public ArrayList<String> values2 = new ArrayList<String>();
+
 
 
     @Test
@@ -154,18 +159,97 @@ public class GameTest {
 	
 	
 	//// Test function getGenderFromInputValues()
-	
+	/*
 		@Test
-	    public void getGenderFromInputValues() {
-	       // Game game = new Game();
-	        ArrayList<String> arrayOfInputs = new ArrayList<>();
+	    public void testRun() {
+	        Game game = new Game();
+	        //game.getGenderFromInputValues(arrayOfInputs);
+	        values.add(0, "Game1");
+	        values.add(1, "John");
+	        values.add(2, "Jackson");
+	        values.add(3, "M");
+	        values.add(4,  "27");
+	        values.add(5, "London");
 	        
-	        arrayOfInputs.add(0, "M");
-	        char genderCharacter = arrayOfInputs.get(3).charAt(0);	
-	       // int i = game.getGenderFromInputValues(genderCharacter);
-	        assertEquals("The result should be 3", genderCharacter, 0);
+	       
+	     //  values.get(3).charAt(0);
+	      // char gender = values.get(3).charAt(0);
+	       
+	      // int age = Integer.parseInt(values.get(4));
+	        
+	        
+	        
+	        
+	        assertTrue("The result should contain 'The first name is smaller or equals in size to the last name and the participant is 30 or younger'",
+					result.contains("The first name is smaller or equals in size to the last name and the participant is 30 or younger"));
+	    
+	        //Game game = new Game();
+         ArrayList<String> bla = game.run(values);
+	        assertEquals("The result should be 1", i, 1);
 	    }
-	
-	
+	    */
+		
+		@Test
+	    public void testGetGenderFromInputValues() {
+			 Game game = new Game();
+		     
+		     
+			values.add(0, "Game1");
+	        values.add(1, "John");
+	        values.add(2, "Jackson");
+	        values.add(3, "M");
+	        values.add(4,  "27");
+	        values.add(5, "London");
+	        int i = game.getGenderFromInputValues(values);
+	       
+	        //char genderCharacter = values.get(3).charAt(0);
+	  
+	        assertEquals("The result should be 'M'", i, 'M');
+			
+		}
+		
+		@Test
+	    public void testGetAgeFromInputValues() {
+			 Game game = new Game();
+		     
+		     
+			values.add(0, "Game1");
+	        values.add(1, "John");
+	        values.add(2, "Jackson");
+	        values.add(3, "M");
+	        values.add(4,  "27");
+	        values.add(5, "London");
+	        int i = game.getAgeFromInputValues(values);
+	       
+	        //char genderCharacter = values.get(3).charAt(0);
+	  
+	        assertEquals("The result should be 'M'", i, 27);
+			
+		}
+		/*
+		@Test
+	    public void testBuildFinalString() {
+			values.add(0, "Game1");
+	        values.add(1, "John");
+	        values.add(2, "Jackson");
+	        values.add(3, "M");
+	        values.add(4,  "27");
+	        values.add(5, "London");
+	        
+			 Game game = new Game();
+			 ResultFromInputs results = new ResultFromInputs();
+			 Conversor conversor = new Conversor();
+			 int bla = game.buildFinalString(values.get(1), values.get(2), results, conversor);
+		     
+			 verify(publishing,times(1)).publishInformation(person)
+	       
+	        //char genderCharacter = values.get(3).charAt(0);
+	  
+	        assertEquals("The result should be 'M'", i, 27);
+			
+		}
+		*/
+		
+		
 
 }
