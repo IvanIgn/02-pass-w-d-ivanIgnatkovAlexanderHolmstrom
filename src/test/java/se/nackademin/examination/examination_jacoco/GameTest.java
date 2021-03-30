@@ -1,8 +1,9 @@
 package se.nackademin.examination.examination_jacoco;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+
+
+import java.util.ArrayList;
 
 import org.junit.Test;
 
@@ -151,22 +152,20 @@ public class GameTest {
 		assertEquals("The result should be 10", i, 10);
 	}
 	
-	///// Test for buildFinalString /////
 	
-	@Test
-	public void buildFinalString() {
-		Game game = new Game();
-		ResultFromInputs ResultFromInputs;
-		String firstName = "Rafael";
-		String lastName = "Silva";
-		char gender = 'M';
-		ResultFromInputs resultFromInputs = new ResultFromInputs();
-		Conversor conversor = new Conversor();
-		//int i = game.buildFinalString("Rafael", "Silva",  resultFromInputs, conversor); 
-		System.out.println(firstName + " " + lastName + ", your are a great " + conversor.getGenderConverterArray().get(gender));
-		//assertEquals("The result should be 7", i, 7);
-		//assertEquals("The result should be 10", i, 10);
-	}
+	//// Test function getGenderFromInputValues()
+	
+		@Test
+	    public void getGenderFromInputValues() {
+	       // Game game = new Game();
+	        ArrayList<String> arrayOfInputs = new ArrayList<>();
+	        
+	        arrayOfInputs.add(0, "M");
+	        char genderCharacter = arrayOfInputs.get(3).charAt(0);	
+	       // int i = game.getGenderFromInputValues(genderCharacter);
+	        assertEquals("The result should be 3", genderCharacter, 0);
+	    }
+	
 	
 
 }

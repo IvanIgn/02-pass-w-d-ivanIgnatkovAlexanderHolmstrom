@@ -21,6 +21,7 @@ public class DataAnalysisTest {
 				result.contains("The name of the homecity is big and the participant is 30 or older"));
 	}
 	
+	
 	//// Test for getResultStringNamesAndAge //// 
 	@Test
 	public void testForGetResultStringNamesAndAge1() {			//firstName < lastName && age == 30
@@ -72,16 +73,7 @@ public class DataAnalysisTest {
 		assertTrue("The result should contain 'The first name is greater in size to the last name and the participant older than 30'",
 				result.contains("The first name is greater in size to the last name and the participant older than 30"));
 	} 
-	/*@Test
-	public void testForGetResultStringNamesAndAge6() {			//firstName == lastName && age > 30
-		DataAnalysis dataAnalysis = new DataAnalysis();
-		ArrayList<String> values = new ArrayList<String>();
-		values.addAll(Arrays.asList("Game", "Rafae", "Silva", "M", "29", "Fortaleza"));
-		String result = dataAnalysis.getResultStringNamesAndAge(values);
-		assertTrue("The result should contain 'The first name is greater or equals in size to the last name and the participant older than 30'",
-				result.contains("The first name is greater or equals in size to the last name and the participant older than 30"));
-	}
-	*/
+
 	@Test
 	public void testForGetResultStringNamesAndAge7() {			//firstName > lastName && age < 30
 		DataAnalysis dataAnalysis = new DataAnalysis();
